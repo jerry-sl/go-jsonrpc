@@ -36,7 +36,7 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 		allow, err := h.Verify(ctx, token)
 		if err != nil {
-			log.Warnf("JWT Verification failed: %s", err)
+			//log.Warnf("JWT Verification failed: %s", err)
 			w.WriteHeader(401)
 			return
 		}
